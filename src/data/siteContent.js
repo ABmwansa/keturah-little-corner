@@ -1,5 +1,6 @@
 export const siteContent = {
   projectTitle: 'Ket + Ron',
+  whatsAppNumber: '260979235167',
   landing: {
     eyebrow: 'Hey Baby',
     intro: 'This is for you',

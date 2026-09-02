@@ -157,6 +157,7 @@ export default function App() {
                 message={smileMessage}
                 onFix={handleSmileFix}
                 animate={smileBurst}
+                whatsAppNumber={siteContent.whatsAppNumber}
               />
               <RightNowCard
                 options={siteContent.rightNowOptions}
