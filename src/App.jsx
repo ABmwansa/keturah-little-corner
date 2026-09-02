@@ -6,10 +6,12 @@ import { FloatingHearts } from './components/FloatingHearts';
 import { HeartCatchGame } from './components/HeartCatchGame';
 import { LandingScreen } from './components/LandingScreen';
 import { LoveReasonsCard } from './components/LoveReasonsCard';
+import { LoveMeterCard } from './components/LoveMeterCard';
 import { MessageModal } from './components/MessageModal';
 import { OpenWhenCard } from './components/OpenWhenCard';
 import { RightNowCard } from './components/RightNowCard';
 import { SuspiciousCard } from './components/SuspiciousCard';
+import { ThisOrThatCard } from './components/ThisOrThatCard';
 import { siteContent } from './data/siteContent';
 
 function shuffle(items) {
@@ -28,23 +30,7 @@ function buildAdventureDescription(selections) {
     return '';
   }
 
-  const transportLine =
-    selections.transport === 'Plane'
-      ? 'We disappear for a bit and let an airport gate become the start of a story.'
-      : selections.transport === 'Train'
-        ? 'We claim window seats and pretend the scenery is performing for us.'
-        : 'We queue the playlist, argue politely about snacks, and let the road do the flirting.';
-
-  const vibeLine =
-    selections.vibe === 'Beach'
-      ? 'The air smells like salt, sunscreen, and very good decisions.'
-      : selections.vibe === 'Mountains'
-        ? 'Everything feels quieter up there, except us laughing at something dumb.'
-        : selections.vibe === 'City'
-          ? 'We wander like the main characters in a place that stays awake longer than we should.'
-          : 'We pick a place with suspiciously low planning and extremely high potential.';
-
-  return `${transportLine} Then it turns into a ${selections.vibe.toLowerCase()} kind of day with ${selections.food.toLowerCase()} involved. Later, we end it with ${selections.after.toLowerCase()}, which feels exactly like the sort of memory future-us would be smug about. ${vibeLine}`;
+  return `Ron and Ket go by ${selections.transport.toLowerCase()}. We do ${selections.vibe.toLowerCase()}, eat ${selections.food.toLowerCase()}, then ${selections.after.toLowerCase()}.`;
 }
 
 function drawReason(deck, messages) {
@@ -121,7 +107,7 @@ export default function App() {
 
   function handleAdventureConfirm() {
     setAdventureConfirmed(true);
-    showToast('Date idea saved in the extremely serious imaginary planner.');
+    showToast('Date saved. Ron and Ket have plans.');
   }
 
   function resetExperience() {
@@ -157,13 +143,10 @@ export default function App() {
         {screen === 'main' ? (
           <section className="main-screen">
             <div className="hero-card card">
-              <p className="eyebrow">For Keturah, obviously</p>
-              <h1>
-                {siteContent.headings.main} Keturah ❤️
-              </h1>
+              <p className="eyebrow">For Ket, from Ron</p>
+              <h1>{siteContent.headings.main}</h1>
               <p className="hero-copy">
-                This is your tiny personalized corner of the internet. It has jokes, feelings,
-                and at least one deeply unserious mini-game.
+                A small place for laughs, love, and us.
               </p>
               <p className="tiny-note">{siteContent.jokes[0]}</p>
             </div>
@@ -181,6 +164,8 @@ export default function App() {
                 onChoose={setRightNowChoice}
               />
               <HeartCatchGame />
+              <ThisOrThatCard questions={siteContent.thisOrThat} />
+              <LoveMeterCard content={siteContent.loveMeter} />
               <OpenWhenCard
                 items={siteContent.openWhenMessages}
                 onOpen={(item) => setActiveOpenWhen(item)}

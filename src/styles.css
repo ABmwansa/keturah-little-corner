@@ -299,6 +299,92 @@ button {
   transform: scale(0.97);
 }
 
+.game-counter {
+  margin: 0;
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.game-question {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+.this-or-that-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.this-or-that-button {
+  min-height: 96px;
+  padding: 16px;
+  border: 1px solid rgba(216, 93, 118, 0.16);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 233, 237, 0.82));
+  color: var(--text);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.this-or-that-button:hover {
+  transform: translateY(-3px) rotate(-1deg);
+  box-shadow: 0 14px 24px rgba(216, 93, 118, 0.14);
+}
+
+.this-or-that-result {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+}
+
+.result-mark {
+  margin: 0;
+  color: var(--accent-deep);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.meter-heart {
+  justify-self: center;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f58da1, #cd4c68);
+  box-shadow: 0 16px 28px rgba(207, 77, 105, 0.22);
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meter-heart:hover {
+  transform: scale(1.06) rotate(4deg);
+}
+
+.meter-heart:active,
+.meter-heart.complete {
+  transform: scale(0.94);
+}
+
+.meter-track {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  color: rgba(216, 93, 118, 0.18);
+  font-size: 1.35rem;
+}
+
+.meter-track .filled {
+  color: var(--accent);
+  animation: heartPop 0.3s ease;
+}
+
 .mini-card,
 .choice-chip {
   border-radius: 20px;
@@ -376,6 +462,44 @@ button {
 .game-meta {
   display: grid;
   gap: 8px;
+}
+
+.tap-game-area {
+  position: relative;
+  min-height: 230px;
+  overflow: hidden;
+  border: 1px solid rgba(216, 93, 118, 0.16);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 230, 236, 0.88), rgba(255, 248, 244, 0.98));
+}
+
+.tap-game-heart {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 20px rgba(207, 77, 105, 0.16);
+  color: var(--accent-deep);
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  transition: left 0.2s ease, top 0.2s ease, transform 0.15s ease;
+}
+
+.tap-game-heart:hover {
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+.tap-game-win {
+  display: grid;
+  min-height: 230px;
+  place-items: center;
+  margin: 0;
+  padding: 24px;
+  color: var(--accent-deep);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .reveal-panel,
@@ -568,6 +692,15 @@ button {
   }
 }
 
+@keyframes heartPop {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (min-width: 760px) {
   .page-frame {
     padding-top: 28px;
@@ -610,5 +743,9 @@ button {
     grid-template-columns: 36px 1fr;
     min-height: auto;
     text-align: left;
+  }
+
+  .this-or-that-options {
+    grid-template-columns: 1fr;
   }
 }

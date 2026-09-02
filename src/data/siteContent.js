@@ -1,126 +1,129 @@
 export const siteContent = {
-  projectTitle: "Keturah's Little Corner of the Internet",
+  projectTitle: 'Ket + Ron',
   landing: {
-    eyebrow: 'Hey Keturah 👀',
-    intro: "I made something for you.",
-    subcopy: "No, you can't return it. 😂❤️",
-    buttonLabel: 'Okay, show me...',
+    eyebrow: 'Hey Baby',
+    intro: 'This is for you',
+    subcopy: 'A little place from Ron, for his Hermione. You make me happy every day.',
+    buttonLabel: 'Come in, baby',
   },
   headings: {
-    main: 'Welcome to your little corner of the internet,',
-    final: 'Dear Keturah,',
+    main: 'Hi Ket,',
+    final: 'Dear Ket,',
   },
-  jokes: [
-    'Certified non-corporate internet zone.',
-    'Built with code, audacity, and suspiciously good taste.',
-    'No bugs were invited. A few may have shown up anyway.',
-  ],
+  jokes: ['Ron made this for Hermione.'],
   loveReasons: [
     'Your smile.',
     'The way you laugh.',
-    'How talking to you can completely change my mood.',
-    'Your kindness.',
-    'Your weird side. Yes, that one. 😂',
-    'The fact that somehow you still tolerate me.',
-    'You make normal days feel special.',
-    "You're Keturah. That's already a pretty strong reason.",
+    'You make me feel safe.',
+    'You trust me.',
+    'You are kind.',
+    'You are beautiful.',
+    'You make normal days better.',
+    'You are my Ket.',
   ],
   emergencyMessages: [
-    '🚨 Smile detected. Crisis avoided.',
-    "Scientific research confirms you're cute.",
-    'Quick reminder: someone called Amos thinks you are amazing.',
-    'You have officially been sentenced to one smile.',
-    'Loading happiness... ██████████ 100%',
+    'Ket, smile a little.',
+    'Ron thinks you are very cute.',
+    'One smile for me, please.',
+    'You are loved. A lot.',
+    'Okay. Better now?',
   ],
   rightNowOptions: [
     {
       id: 'smile',
-      icon: '☺',
+      icon: ':)',
       label: 'Make me smile',
-      message: 'Prescription filled: one silly smile, plus a reminder that you are ridiculously lovely.',
+      message: 'You are too cute when you laugh. Ron said so.',
     },
     {
       id: 'hug',
-      icon: '♡',
+      icon: 'o',
       label: 'Send a hug',
-      message: 'A long, calm hug has been dispatched. It includes forehead kisses and absolutely no rushing.',
+      message: 'A big hug from Ron. Stay there for a bit.',
     },
     {
       id: 'reminder',
-      icon: '✦',
+      icon: '*',
       label: 'Remind me',
-      message: 'You are capable, kind, and far more special than you sometimes let yourself believe.',
+      message: 'You are strong, kind, and easy to love, Hermione.',
     },
   ],
+  thisOrThat: [
+    { question: 'Coffee or tea?', options: ['Coffee', 'Tea'] },
+    { question: 'Movie or picnic?', options: ['Movie', 'Picnic'] },
+    { question: 'Stay in or go out?', options: ['Stay in', 'Go out'] },
+    { question: 'Day date or night date?', options: ['Day date', 'Night date'] },
+    { result: 'Good choices, Ket. The best plan is still anything with Ron.' },
+  ],
+  loveMeter: {
+    target: 8,
+    messages: [
+      'Ron noticed.',
+      'Ron is smiling now.',
+      'This is getting serious.',
+      'Okay Ket, calm down.',
+      'Too much love.',
+      'Ron is fully distracted.',
+      'One more.',
+      'Almost there.',
+    ],
+    completeMessage: 'Full. Hermione has Ron completely.',
+  },
   openWhenMessages: [
     {
       title: "Open when you're sad",
-      message:
-        "Placeholder: write something comforting here for the hard days. This is a good place for your gentlest words.",
+      message: 'Come here, Ket. You do not have to carry everything alone. Ron is with you.',
     },
     {
       title: "Open when you're tired",
-      message:
-        'Placeholder: remind her to rest, breathe, and let herself be looked after too.',
+      message: 'Rest, love. You have done enough for today.',
     },
     {
       title: 'Open when you miss me',
-      message:
-        'Placeholder: add a message that feels like a tiny hug from a screen.',
+      message: 'Think of our next movie night. We will have more time together soon.',
     },
     {
-      title: 'Open when you need motivation',
-      message:
-        'Placeholder: write the kind of encouragement that sounds like you, not a poster.',
+      title: 'Open when you need a push',
+      message: 'You can do it, Ket. I believe in you.',
     },
     {
       title: "Open when you can't sleep",
-      message:
-        'Placeholder: add something calm, sleepy, and reassuring here.',
+      message: 'Close your eyes. Breathe slowly. Ron loves you.',
     },
     {
-      title: "Open when you're having a great day",
-      message:
-        'Placeholder: celebrate her wins here and make the good days feel even brighter.',
+      title: "Open when you're happy",
+      message: 'Keep smiling. Your happy face is one of Ron’s favorite things.',
     },
   ],
   adventureOptions: {
-    transport: ['Road trip', 'Plane', 'Train'],
-    vibe: ['Beach', 'Mountains', 'City', 'Somewhere completely random'],
-    food: [
-      'Pizza',
-      'Fancy dinner',
-      'Street food',
-      "I'll let Amos choose and immediately regret it",
-    ],
-    after: ['Movie', 'Long walk', 'Music', 'Stay up talking'],
+    transport: ['Car', 'Plane', 'Train'],
+    vibe: ['Beach', 'Mountains', 'City', 'Somewhere new'],
+    food: ['Pizza', 'Dinner', 'Street food', 'Ron chooses'],
+    after: ['Movie', 'Long walk', 'Music', 'Talk all night'],
   },
   adventureIntros: {
-    transport: 'Choose our transport:',
-    vibe: 'Choose the vibe:',
-    food: 'Choose the food:',
-    after: 'Choose what happens afterwards:',
+    transport: 'How do we go?',
+    vibe: 'Where do we go?',
+    food: 'What do we eat?',
+    after: 'What happens after?',
   },
   finalMessage: [
-    "This website isn't finished.",
-    'Not because I ran out of code...',
-    "but because we're still making the memories that belong here. ❤️",
+    'This is not the end.',
+    'We still have more memories to make.',
+    'More laughs. More movie nights. More us.',
   ],
-  signature: 'Amos',
+  signature: 'Ron',
   suspicious: {
-    warning: 'This button has absolutely no emotional consequences whatsoever.',
-    reveal: "I knew you'd click it. 😂",
-    followUp: "Since you're already here...",
-    letter:
-      'I just wanted you to know that having you in my life makes ordinary days feel a little less ordinary. ❤️',
-    buttonLabel: "There's one more thing...",
+    warning: 'Ket, do not click this.',
+    reveal: 'You clicked it.',
+    followUp: 'So listen, Hermione.',
+    letter: 'I am happy you are in my life. I trust you. I love you. Ron is lucky to have you.',
+    buttonLabel: 'One more thing',
   },
 };
 
-// Add future photos, extra messages, or real memories here so the UI stays untouched.
+// Edit the messages here whenever you want to add new memories or jokes.
 export const customizationNotes = {
-  photos:
-    'If you want to add photos later, create a src/assets folder and reference those files from this config.',
-  memories:
-    'The love reasons, open-when notes, and final text are all designed to be edited in this file only.',
+  photos: 'Add future photos in src/assets and reference them from this file.',
+  memories: 'The messages and game choices are all kept in this file.',
 };
