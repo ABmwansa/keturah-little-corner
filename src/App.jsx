@@ -1,7 +1,12 @@
 import { useState } from 'react';
-import consultationImage from './assets/clinic-consultation.png';
+import consultationImage from './assets/clinic-consultation.jpg';
 import examinationImage from './assets/clinic-examination.jpg';
 import listeningImage from './assets/clinic-listening.jpg';
+import receptionImage from './assets/umodzi-reception.jpg';
+import receptionDeskImage from './assets/umodzi-reception-desk.jpeg';
+import treatmentRoomImage from './assets/umodzi-treatment-room.jpeg';
+import consultationRoomImage from './assets/umodzi-consultation-room.jpeg';
+import exteriorImage from './assets/umodzi-exterior.jpg';
 import logo from './assets/umodzi-logo.jpeg';
 import { clinicContent as clinic } from './data/clinicContent';
 
@@ -69,7 +74,7 @@ export default function App() {
               </div>
             </div>
             <aside className="hero-visual">
-              <img src={consultationImage} alt="Doctor listening carefully during a patient consultation" />
+              <img src={consultationImage} alt="Doctor listening carefully during a patient consultation" fetchPriority="high" />
               <div className="hero-image-note"><span>24/7</span><p>Here when you need us</p></div>
             </aside>
           </div>
@@ -94,16 +99,35 @@ export default function App() {
           </div>
         </section>
 
+        <section className="clinic-gallery-section">
+          <div className="shell">
+            <div className="gallery-heading"><div><p className="eyebrow">Our clinic</p><h2>A clean, welcoming space for your care.</h2></div><p>From reception to consultation, Umodzi is designed to help you feel comfortable from the moment you arrive.</p></div>
+            <div className="clinic-gallery">
+              <figure className="gallery-feature"><img src={receptionImage} alt="Umodzi Medical Center reception and waiting area" loading="lazy" decoding="async" /><figcaption><span>01</span> Reception and waiting area</figcaption></figure>
+              <figure><img src={receptionDeskImage} alt="Umodzi Medical Center reception desk" loading="lazy" decoding="async" /><figcaption><span>02</span> Reception desk</figcaption></figure>
+              <figure><img src={treatmentRoomImage} alt="Umodzi Medical Center treatment room" loading="lazy" decoding="async" /><figcaption><span>03</span> Treatment room</figcaption></figure>
+              <figure><img src={consultationRoomImage} alt="Umodzi Medical Center consultation room" loading="lazy" decoding="async" /><figcaption><span>04</span> Consultation room</figcaption></figure>
+            </div>
+          </div>
+        </section>
+
         <section className="care-banner" id="about">
           <div className="shell care-grid">
             <div className="care-statement"><p className="eyebrow">Why Umodzi</p><h2>Good care starts with listening.</h2><p>We are committed to care that is kind, professional and accessible to the community we serve.</p><a className="button button-primary" href={whatsappUrl('Hello Umodzi Medical Center, I would like to know more about your services.')}>Talk to our team</a><div className="reasons-list">{clinic.reasons.map((reason, index) => <div key={reason}><span>0{index + 1}</span><p>{reason}</p></div>)}</div></div>
-            <div className="care-visuals"><img className="care-image-main" src={examinationImage} alt="Healthcare professional examining a patient" /><img className="care-image-small" src={listeningImage} alt="Doctor listening to a patient during a consultation" /><div className="care-image-note"><span>Care</span><p>Professional care for every family.</p></div></div>
+            <div className="care-visuals"><img className="care-image-main" src={examinationImage} alt="Healthcare professional examining a patient" loading="lazy" decoding="async" /><img className="care-image-small" src={listeningImage} alt="Doctor listening to a patient during a consultation" loading="lazy" decoding="async" /><div className="care-image-note"><span>Care</span><p>Professional care for every family.</p></div></div>
           </div>
         </section>
 
         <section className="section shell purpose-grid">
           <article><p className="eyebrow">Our mission</p><h2>Healthcare that brings people together.</h2><p>{clinic.mission}</p></article>
           <article><p className="eyebrow">Our vision</p><h2>Healthier lives. Stronger communities.</h2><p>{clinic.vision}</p></article>
+        </section>
+
+        <section className="visit-section">
+          <div className="shell visit-grid">
+            <div className="visit-image"><img src={exteriorImage} alt="Umodzi Medical Center exterior and clinic sign" loading="lazy" decoding="async" /></div>
+            <div className="visit-copy"><p className="eyebrow">Visit Umodzi</p><h2>Easy to find. Ready to care.</h2><p>Visit us at our Garden House location in Lusaka for professional, patient-focused healthcare.</p><div className="visit-address"><span>Location</span><strong>{clinic.address}</strong></div><a className="button button-primary" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clinic.address)}`} target="_blank" rel="noreferrer">Get directions</a></div>
+          </div>
         </section>
 
         <section className="contact-section" id="contact">
