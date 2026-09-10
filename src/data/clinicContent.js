@@ -7,6 +7,7 @@ export const clinicContent = {
   whatsAppNumber: '260750148664',
   address: 'Plot No. 2211H, Garden House, Lusaka, Zambia',
   email: 'umodzimedicalcenter@gmail.com',
+  facebookUrl: 'https://www.facebook.com/share/19ifBj3yJZ/?mibextid=wwXIfr',
   services: [
     { icon: '01', title: 'Consultation', text: 'General outpatient consultation and treatment.' },
     { icon: '02', title: 'Laboratory', text: 'Hematology and serology testing.' },
