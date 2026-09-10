@@ -5,7 +5,7 @@ export const clinicContent = {
   phonePrimary: '+260 750 148 664',
   phoneSecondary: '+260 978 586 868',
   whatsAppNumber: '260750148664',
-  address: 'Plot No. 2211H, Garden House, Lusaka, Zambia',
+  address: 'Plot No. 2211H, Garden House, Ngwenya, Lusaka, Zambia',
   email: 'umodzimedicalcenter@gmail.com',
   facebookUrl: 'https://www.facebook.com/share/19ifBj3yJZ/?mibextid=wwXIfr',
   services: [
