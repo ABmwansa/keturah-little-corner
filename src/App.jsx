@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import consultationImage from './assets/clinic-consultation.png';
+import examinationImage from './assets/clinic-examination.jpg';
+import listeningImage from './assets/clinic-listening.jpg';
 import logo from './assets/umodzi-logo.jpeg';
 import { clinicContent as clinic } from './data/clinicContent';
 
@@ -65,12 +68,9 @@ export default function App() {
                 <span>24/7 care</span><span>Walk-ins welcome</span><span>Family focused</span>
               </div>
             </div>
-            <aside className="hero-card">
-              <p className="card-label">UMODZI MEDICAL CENTER</p>
-              <div className="hero-mark">+</div>
-              <h2>Compassion. Care. Community.</h2>
-              <p>Here when you need us, every day of the week.</p>
-              <a href="#contact">Find us in Lusaka <span aria-hidden="true">↓</span></a>
+            <aside className="hero-visual">
+              <img src={consultationImage} alt="Doctor listening carefully during a patient consultation" />
+              <div className="hero-image-note"><span>24/7</span><p>Here when you need us</p></div>
             </aside>
           </div>
         </section>
@@ -96,8 +96,8 @@ export default function App() {
 
         <section className="care-banner" id="about">
           <div className="shell care-grid">
-            <div className="care-statement"><p className="eyebrow">Why Umodzi</p><h2>Good care starts with listening.</h2><p>We are committed to care that is kind, professional and accessible to the community we serve.</p><a className="button button-primary" href={whatsappUrl('Hello Umodzi Medical Center, I would like to know more about your services.')}>Talk to our team</a></div>
-            <div className="reasons-list">{clinic.reasons.map((reason, index) => <div key={reason}><span>0{index + 1}</span><p>{reason}</p></div>)}</div>
+            <div className="care-statement"><p className="eyebrow">Why Umodzi</p><h2>Good care starts with listening.</h2><p>We are committed to care that is kind, professional and accessible to the community we serve.</p><a className="button button-primary" href={whatsappUrl('Hello Umodzi Medical Center, I would like to know more about your services.')}>Talk to our team</a><div className="reasons-list">{clinic.reasons.map((reason, index) => <div key={reason}><span>0{index + 1}</span><p>{reason}</p></div>)}</div></div>
+            <div className="care-visuals"><img className="care-image-main" src={examinationImage} alt="Healthcare professional examining a patient" /><img className="care-image-small" src={listeningImage} alt="Doctor listening to a patient during a consultation" /><div className="care-image-note"><span>Care</span><p>Professional care for every family.</p></div></div>
           </div>
         </section>
 
